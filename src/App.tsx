@@ -5,7 +5,8 @@ import {BrowserRouter as Router,Route,Routes} from 'react-router-dom';
 import Footer from './component/layout/Footer';
 import Header from './component/layout/Header';
 import Home from "./component/layout/Home";
-
+import List from "./component/travel/List";
+import Detail from "./component/travel/Detail";
 function App() {
     useEffect(() => {
         const loadScript = (src: string) => {
@@ -50,6 +51,8 @@ function App() {
       <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path={"/list/:region/:contenttype"} element={<List/>} />
+          <Route path={"/detail/:region/:contenttype/:contentid"} element={<Detail/>} />
         </Routes>
       <Footer />
     </Router>

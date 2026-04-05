@@ -1,5 +1,5 @@
 import {Fragment} from "react";
-
+import {Link} from "react-router-dom";
 function Header() {
     return (
         <Fragment>
@@ -39,45 +39,45 @@ function Header() {
                                         <li className="has-children">
                                             <a href="category.html">서울 여행</a>
                                             <ul className="dropdown">
-                                                <li><a href="search-result.html">명소</a></li>
-                                                <li><a href="blog.html">문화시설</a></li>
-                                                <li><a href="single.html">축제/행사</a></li>
-                                                <li><a href="category.html">음식점</a></li>
-                                                <li><a href="about.html">쇼핑</a></li>
-                                                <li><a href="contact.html">숙소</a></li>
+                                                <li><Link to={"/list/seoul/12"}>명소</Link></li>
+                                                <li><Link to={"/list/seoul/14"}>문화시설</Link></li>
+                                                <li><Link to={"/list/seoul/15"}>축제/행사</Link></li>
+                                                <li><Link to={"/list/seoul/39"}>음식점</Link></li>
+                                                <li><Link to={"/list/seoul/38"}>쇼핑</Link></li>
+                                                <li><Link to={"/list/seoul/32"}>숙박</Link></li>
                                             </ul>
                                         </li>
                                         <li className="has-children">
                                             <a href="category.html">경주 여행</a>
                                             <ul className="dropdown">
-                                                <li><a href="search-result.html">명소</a></li>
-                                                <li><a href="blog.html">문화시설</a></li>
-                                                <li><a href="single.html">축제/행사</a></li>
-                                                <li><a href="category.html">음식점</a></li>
-                                                <li><a href="about.html">쇼핑</a></li>
-                                                <li><a href="contact.html">숙소</a></li>
+                                                <li><Link to={"/list/gyeongju/12"}>명소</Link></li>
+                                                <li><Link to={"/list/gyeongju/14"}>문화시설</Link></li>
+                                                <li><Link to={"/list/gyeongju/15"}>축제/행사</Link></li>
+                                                <li><Link to={"/list/gyeongju/39"}>음식점</Link></li>
+                                                <li><Link to={"/list/gyeongju/38"}>쇼핑</Link></li>
+                                                <li><Link to={"/list/gyeongju/32"}>숙박</Link></li>
                                             </ul>
                                         </li>
                                         <li className="has-children">
                                             <a href="category.html">부산 여행</a>
                                             <ul className="dropdown">
-                                                <li><a href="search-result.html">명소</a></li>
-                                                <li><a href="blog.html">문화시설</a></li>
-                                                <li><a href="single.html">축제/행사</a></li>
-                                                <li><a href="category.html">음식점</a></li>
-                                                <li><a href="about.html">쇼핑</a></li>
-                                                <li><a href="contact.html">숙소</a></li>
+                                                <li><Link to={"/list/busan/12"}>명소</Link></li>
+                                                <li><Link to={"/list/busan/14"}>문화시설</Link></li>
+                                                <li><Link to={"/list/busan/15"}>축제/행사</Link></li>
+                                                <li><Link to={"/list/busan/39"}>음식점</Link></li>
+                                                <li><Link to={"/list/busan/38"}>쇼핑</Link></li>
+                                                <li><Link to={"/list/busan/32"}>숙박</Link></li>
                                             </ul>
                                         </li>
                                         <li className="has-children">
                                             <a href="category.html">제주 여행</a>
                                             <ul className="dropdown">
-                                                <li><a href="search-result.html">명소</a></li>
-                                                <li><a href="blog.html">문화시설</a></li>
-                                                <li><a href="single.html">축제/행사</a></li>
-                                                <li><a href="category.html">음식점</a></li>
-                                                <li><a href="about.html">쇼핑</a></li>
-                                                <li><a href="contact.html">숙소</a></li>
+                                                <li><Link to={"/list/jeju/12"}>명소</Link></li>
+                                                <li><Link to={"/list/jeju/14"}>문화시설</Link></li>
+                                                <li><Link to={"/list/jeju/15"}>축제/행사</Link></li>
+                                                <li><Link to={"/list/jeju/39"}>음식점</Link></li>
+                                                <li><Link to={"/list/jeju/38"}>쇼핑</Link></li>
+                                                <li><Link to={"/list/jeju/32"}>숙박</Link></li>
                                             </ul>
                                         </li>
                                         <li><a href="category.html">Youtube</a></li>
