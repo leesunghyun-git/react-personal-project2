@@ -55,7 +55,7 @@ const Shopping: FC<DetailData> = (data: DetailData) => {
             </tr>
             <tr>
                 <th className={"w-25"}>주차</th>
-                <td className={"w-75"} dangerouslySetInnerHTML={{__html:data.dto.infocenter}}></td>
+                <td className={"w-75"} dangerouslySetInnerHTML={{__html:data.dto.parking}}></td>
             </tr>
             </tbody>
         </table>
