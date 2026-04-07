@@ -3,7 +3,7 @@ import api from "../../commons/api";
 import {useQuery} from '@tanstack/react-query';
 import {TravelListDTO,HomeData} from "../../commons/TravelData";
 import {AxiosResponse} from "axios";
-
+import {Link} from "react-router-dom";
 function Home(){
     const {isLoading,isError,error,data} =useQuery<AxiosResponse<HomeData>,Error>({
         queryKey:["main-data"],
@@ -92,13 +92,13 @@ function Home(){
                             return(
                             <div className="col-md-6 col-lg-3">
                                 <div className="blog-entry">
-                                    <a href="single.html" className="img-link">
+                                    <Link to={"/detail/seoul/"+data.contenttype+"/"+data.contentid} className="img-link">
                                         <img src={data.image1} alt="Image" className="img-fluid" style={{"height":"220px","width":"360px"}}/>
-                                    </a>
+                                    </Link>
                                     <span className="date">조회수 : {data.hit}</span>
                                     <h2><a href="single.html">{data.title}</a></h2>
                                     <p>{data.address}</p>
-                                    <p><a href="#" className="read-more">상세 보기</a></p>
+                                    <p><Link to={"/detail/seoul/"+data.contenttype+"/"+data.contentid} className="read-more">상세 보기</Link></p>
                                 </div>
                             </div>
                             );
@@ -122,13 +122,13 @@ function Home(){
                                     return(
                                         <div className="col-md-6 col-lg-3">
                                             <div className="blog-entry">
-                                                <a href="single.html" className="img-link">
+                                                <Link to={"/detail/gyeongju/"+data.contenttype+"/"+data.contentid} className="img-link">
                                                     <img src={data.image1} alt="Image" className="img-fluid" style={{"height":"220px","width":"360px"}}/>
-                                                </a>
+                                                </Link>
                                                 <span className="date">조회수 : {data.hit}</span>
                                                 <h2><a href="single.html">{data.title}</a></h2>
                                                 <p>{data.address}</p>
-                                                <p><a href="#" className="read-more">상세 보기</a></p>
+                                                <p><Link to={"/detail/gyeongju/"+data.contenttype+"/"+data.contentid} className="read-more">상세 보기</Link></p>
                                             </div>
                                         </div>
                                     );
@@ -152,13 +152,13 @@ function Home(){
                                     return(
                                         <div className="col-md-6 col-lg-3">
                                             <div className="blog-entry">
-                                                <a href="single.html" className="img-link">
+                                                <Link to={"/detail/busan/"+data.contenttype+"/"+data.contentid}  className="img-link">
                                                     <img src={data.image1} alt="Image" className="img-fluid" style={{"height":"220px","width":"360px"}}/>
-                                                </a>
+                                                </Link>
                                                 <span className="date">조회수 : {data.hit}</span>
                                                 <h2><a href="single.html">{data.title}</a></h2>
                                                 <p>{data.address}</p>
-                                                <p><a href="#" className="read-more">상세 보기</a></p>
+                                                <p><Link to={"/detail/busan/"+data.contenttype+"/"+data.contentid}className="read-more">상세 보기</Link></p>
                                             </div>
                                         </div>
                                     );
@@ -183,13 +183,13 @@ function Home(){
                                 return(
                                     <div className="col-md-6 col-lg-3">
                                         <div className="blog-entry">
-                                            <a href="single.html" className="img-link">
+                                            <Link to={"/detail/jeju/"+data.contenttype+"/"+data.contentid} className="img-link">
                                                 <img src={data.image1} alt="Image" className="img-fluid" style={{"height":"220px","width":"360px"}}/>
-                                            </a>
+                                            </Link>
                                             <span className="date">조회수 : {data.hit}</span>
                                             <h2><a href="single.html">{data.title}</a></h2>
                                             <p>{data.address}</p>
-                                            <p><a href="#" className="read-more">상세 보기</a></p>
+                                            <p><Link to={"/detail/jeju/"+data.contenttype+"/"+data.contentid} className="read-more">상세 보기</Link></p>
                                         </div>
                                     </div>
                                 );

@@ -3,7 +3,7 @@ import {useState, useEffect, Fragment} from "react";
 import api from '../../commons/api';
 import {TravelListDTO,TravelListData} from "../../commons/TravelData";
 import {AxiosResponse} from "axios";
-import {useParams,useNavigate} from "react-router";
+import {useParams} from "react-router";
 import {Link} from "react-router-dom";
 import Pagination from "../../commons/Pagination";
 function List() {
@@ -68,6 +68,7 @@ function List() {
             krregion='제주'
             break;
     }
+    console.log(data);
     return (
         <Fragment>
             <div className="section search-result-wrap">
@@ -83,14 +84,14 @@ function List() {
                                 return (
                                     <div className="col-md-6 col-lg-3">
                                         <div className="blog-entry">
-                                            <a href="single.html" className="img-link">
+                                            <Link to={"/detail/"+region+"/"+contenttype+"/"+data.contentid} className="img-link">
                                                 <img src={data.image1} alt="Image" className="img-fluid"
                                                      style={{"height": "220px", "width": "360px"}}/>
-                                            </a>
+                                            </Link>
                                             <span className="date">조회수 : {data.hit}</span>
                                             <h2><a href="single.html">{data.title}</a></h2>
                                             <p>{data.address}</p>
-                                            <p><a href="#" className="read-more">상세 보기</a></p>
+                                            <p><Link to={"/detail/"+region+"/"+contenttype+"/"+data.contentid} className="read-more">상세 보기</Link></p>
                                         </div>
                                     </div>
                                 )

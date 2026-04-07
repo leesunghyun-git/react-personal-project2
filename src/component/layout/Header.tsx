@@ -25,8 +25,8 @@ function Header() {
                         <div className="site-navigation">
                             <div className="row g-0 align-items-center">
                                 <div className="col-2">
-                                    <a href="index.html" className="logo m-0 float-start">Ktravel<span
-                                        className="text-primary">.</span></a>
+                                    <Link to={"/"} className="logo m-0 float-start">Ktravel<span
+                                        className="text-primary">.</span></Link>
                                 </div>
                                 <div className="col-8 text-center">
                                     <form action="#" className="search-form d-inline-block d-lg-none">
